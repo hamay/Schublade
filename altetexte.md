@@ -4,9 +4,15 @@ layout: default
 
 <div id="main">
 
-{% for post in site.posts %}	
-    <h3><a href="{{ post.url }}">{{ post.title }}</a></h3>
     <p><small><strong>{{ post.date | date: "%B %e, %Y" }}</strong></p>			
-{% endfor %}	
+	
+
+<ul>
+  {% for post in site.posts %}
+    <li>
+      <a href="{{site.baseurl}}{{ post.url }}">{{ post.title }}</a>
+    </li>
+  {% endfor %}
+</ul>
 		
 </div>
